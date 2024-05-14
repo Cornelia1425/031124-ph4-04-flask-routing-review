@@ -7,6 +7,21 @@ metadata = MetaData(naming_convention={
 
 db = SQLAlchemy(metadata=metadata)
 
+class Meme(db.Model):
+    __tablename__= 'cat_names_table'
+    id = db.Column(db.Integer, primary_key=True)
+    img_url = db.Column(db.String)
+    caption = db.Column(db.String)
+    likes = db.Column(db.Integer, default=0)
+
+    def to_dict(self):
+        return{
+            'id':self.id,
+            'caption':self.caption,
+            'img_url':self.img_url,
+            'likes':self.likes
+        }
+
 # Meme ########
 # id -> int
 # img_url -> str
@@ -14,5 +29,3 @@ db = SQLAlchemy(metadata=metadata)
 # likes -> int
 # #############
 
-class Meme():
-    pass

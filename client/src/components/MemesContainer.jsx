@@ -4,7 +4,7 @@ import MemeForm from './MemeForm'
 
 function MemesContainer() {
 
-    const URL = "http://localhost:3000/memes"
+    const URL = "/api/cat-meme"
     const [memes, setMemes] = useState([])
 
     useEffect(() => {

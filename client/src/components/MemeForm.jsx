@@ -2,7 +2,8 @@ import { useState } from 'react'
 
 function MemeForm({ setMemes }) {
 
-    const URL = 'http://localhost:3000/memes'
+    const URL = '/api/cat-meme'
+    // const URL = 'http://localhost:5555/cat-meme'
     const [img_url, setImgURL] = useState("")
     const [caption, setCaption] = useState("")
 
